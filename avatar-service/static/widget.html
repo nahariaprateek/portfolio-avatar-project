@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prateek Avatar Widget</title>
+    <link rel="stylesheet" href="/widget.css" />
+  </head>
+  <body>
+    <div class="widget-shell">
+      <section class="hero-panel">
+        <div class="avatar-ring">
+          <img src="/assets/photo.svg" alt="Prateek avatar" class="avatar-image" />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio copilot</p>
+          <h1 id="avatar-name">Prateek Naharia</h1>
+          <p id="avatar-status">Waking the local mock avatar service...</p>
+        </div>
+      </section>
+
+      <section class="chat-shell">
+        <div id="message-list" class="message-list"></div>
+
+        <div class="suggestions" id="suggestions"></div>
+
+        <form id="chat-form" class="composer">
+          <input
+            id="chat-input"
+            type="text"
+            autocomplete="off"
+            placeholder="Ask about projects, experience, skills, or this avatar build"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="/widget.js"></script>
+  </body>
+</html>

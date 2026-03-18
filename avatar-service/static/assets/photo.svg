@@ -1,0 +1,22 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="92" y1="84" x2="552" y2="556" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9966"/>
+      <stop offset="1" stop-color="#FF5E62"/>
+    </linearGradient>
+    <linearGradient id="card" x1="120" y1="120" x2="520" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171717"/>
+      <stop offset="1" stop-color="#2A2A2A"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="320" fill="url(#bg)"/>
+  <circle cx="320" cy="252" r="108" fill="#FFE2D3"/>
+  <path d="M184 500C184 421.575 247.575 358 326 358H314C392.425 358 456 421.575 456 500V568H184V500Z" fill="url(#card)"/>
+  <circle cx="280" cy="238" r="10" fill="#1F1F1F"/>
+  <circle cx="362" cy="238" r="10" fill="#1F1F1F"/>
+  <path d="M284 302C305.5 320.667 336.5 320.667 358 302" stroke="#1F1F1F" stroke-width="14" stroke-linecap="round"/>
+  <path d="M236 194C254.667 160.667 284.667 144 326 144C367.333 144 398 160.667 418 194" stroke="#1F1F1F" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="514" cy="126" r="52" fill="#171717" fill-opacity="0.16"/>
+  <circle cx="112" cy="126" r="40" fill="#171717" fill-opacity="0.12"/>
+  <text x="320" y="564" fill="#FFFFFF" font-size="72" font-family="Arial, sans-serif" font-weight="700" text-anchor="middle">PN</text>
+</svg>
