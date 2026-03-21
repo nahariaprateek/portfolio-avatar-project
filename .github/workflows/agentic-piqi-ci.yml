@@ -1,0 +1,46 @@
+name: Agentic PIQI CI
+
+on:
+  pull_request:
+    paths:
+      - "Healthcare agentic AI solutions with AI created Dashboards/agentic_piqi/**"
+      - ".github/workflows/agentic-piqi-ci.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "Healthcare agentic AI solutions with AI created Dashboards/agentic_piqi/**"
+      - ".github/workflows/agentic-piqi-ci.yml"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "Healthcare agentic AI solutions with AI created Dashboards/agentic_piqi"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "Healthcare agentic AI solutions with AI created Dashboards/agentic_piqi/requirements.txt"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m unittest discover -s tests
+
+      - name: Validate sample CLI run
+        run: python -m app.main --input data/sample_data/request_patient.json > /tmp/agentic-piqi-output.json
+
+      - name: Upload sample CLI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: agentic-piqi-cli-output
+          path: /tmp/agentic-piqi-output.json
